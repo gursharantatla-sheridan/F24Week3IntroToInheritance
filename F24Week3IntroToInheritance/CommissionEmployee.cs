@@ -55,7 +55,7 @@ namespace F24Week3IntroToInheritance
 
         public override string ToString()
         {
-			return $"Id = {Id}\nName = {Name}\nGross Sales = {GrossSales:C}\nCommissionRate = {CommissionRate:P}";
+			return $"Id = {Id}\nName = {Name}\nGross Sales = {GrossSales:C}\nCommission Rate = {CommissionRate:P}";
         }
     }
 }
