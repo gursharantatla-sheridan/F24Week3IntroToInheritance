@@ -40,10 +40,12 @@ namespace F24Week3IntroToInheritance
 			set { _commissionRate = value; }
 		}
 
-		public CommissionEmployee(int id, string name)
+		public CommissionEmployee(int id, string name, double grossSales, double commissionRate)
         {
 			Id = id;
 			Name = name;
+			GrossSales = grossSales;
+			CommissionRate = commissionRate;
         }
 
 		public double Earnings()
@@ -53,7 +55,7 @@ namespace F24Week3IntroToInheritance
 
         public override string ToString()
         {
-			return $"Id = {Id}\nName = {Name}\nGross Sales = {GrossSales}\nCommissionRate = {CommissionRate}";
+			return $"Id = {Id}\nName = {Name}\nGross Sales = {GrossSales:C}\nCommissionRate = {CommissionRate:P}";
         }
     }
 }
