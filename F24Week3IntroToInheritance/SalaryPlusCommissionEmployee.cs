@@ -16,10 +16,19 @@ namespace F24Week3IntroToInheritance
 			set { _salary = value; }
 		}
 
-        public SalaryPlusCommissionEmployee(int id, string name, double grossSales, double commissionRate, double salary)
+        public SalaryPlusCommissionEmployee(int id, string name, double grossSales, double commissionRate, double salary) : base(id, name, grossSales, commissionRate)
         {
-            Id = id;
-            Name = name;
+            Salary = salary;
+        }
+
+        public double Earnings()
+        {
+            return Salary + base.Earnings();
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + $"\nSalary = {Salary:C}";
         }
     }
 }
